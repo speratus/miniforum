@@ -1,24 +1,36 @@
-# README
+# Miniforum
+Miniforum is a small Forum app built for a blog series on dev.to: [Build a Forum App, from code to Deploy][series].
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Features
 
-Things you may want to cover:
+* Sign up as a user to post questions/answers
+* Like posts or replies to express appreciation for the question
+* Ranks users and topics according to the number of people who have liked 
 
-* Ruby version
+## Stack
 
-* System dependencies
+* Ruby on Rails
+* GraphQL
+* Minitest
+* TravisCI
 
-* Configuration
+See full details of the whole application stack [here][series].
 
-* Database creation
+## Installation
 
-* Database initialization
+1. clone the repo
+```bash
+git clone https://github.com/speratus/miniforum.git
+```
 
-* How to run the test suite
+2. install the dependencies
+```bash
+bundle install
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+3. run the server
+```bash
+rails s
+```
 
-* Deployment instructions
-
-* ...
+[series]: https://dev.to/speratus/build-a-forum-app-from-code-to-deploy-3lcc/
