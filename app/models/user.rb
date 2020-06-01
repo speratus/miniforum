@@ -6,6 +6,18 @@ class User < ApplicationRecord
 
     validates :email, :name, :username, :password, presence: true
     validates :username, :email, uniqueness: true
-    validates :username, format: {with: /\w/, message: "only alphanumeric characters allowed"}
-    validates :email, format: {with: /[\w\.\+]+@\w+(?:\.\w+)+/, message: "must be a valid email address"}
+    validate :alphanumeric_only
+    validate :valid_email
+
+    def alphanumeric_only
+        if !(/\W/ =~ self.username).nil?
+            self.errors[:username] << "Username must be alphanumeric"
+        end
+    end
+
+    def valid_email
+        if /[\w\.\+]+@\w+(?:\.\w+)+/.match(self.email).to_s != self.email
+            self.errors[:email] << "Must be a valid email address."
+        end
+    end
 end
