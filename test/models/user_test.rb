@@ -39,7 +39,7 @@ class UserTest < ActiveSupport::TestCase
     user = User.new(
       username: 'jon',
       name: 'jon doe',
-      email: 'hello&world@universe.co',
+      email: 'hello@world@universe.co',
       password: 'nobody knows'
     )
     assert_equal false, user.save
