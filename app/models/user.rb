@@ -1,3 +1,5 @@
+require 'mail'
+
 class User < ApplicationRecord
     has_secure_password
     has_many :topics
@@ -16,8 +18,10 @@ class User < ApplicationRecord
     end
 
     def valid_email
-        if /[\w\.\+]+@\w+(?:\.\w+)+/.match(self.email).to_s != self.email
-            self.errors[:email] << "Must be a valid email address."
+        begin
+            Mail::Address.new(self.email)
+        rescue Mail::Field::ParseError
+            self.errors[:email] << "Must be a valid email."
         end
     end
 end
