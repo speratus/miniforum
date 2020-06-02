@@ -19,3 +19,8 @@ reply_topic:
   title: Using fixtures is useful
   content: Using fixtures makes writing tests easier.
   user: reply_user
+
+associations:
+  title: This topic has many associations
+  content: This is a topic which has many associations
+  user: topic_user

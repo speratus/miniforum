@@ -23,3 +23,9 @@ hasmany_test:
   user: reply_user
   post: belongs_test
   post_type: Reply
+
+topic_reply:
+  content: That is true
+  user: topic_user
+  post: associations
+  post_type: Topic

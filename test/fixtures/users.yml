@@ -23,3 +23,9 @@ reply_user:
   name:  Buddy
   password_digest: 801j380r1j83j13r9103c1
   email: buddy@example.com
+
+topic_user:
+  username: iamtest
+  name: I am a test
+  password_digest: 1p83jf1893jr0j9f1i
+  email: test@example.com

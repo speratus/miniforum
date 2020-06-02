@@ -19,3 +19,8 @@ reply_like:
   user: reply_user
   post: hasmany_test
   post_type: Reply
+
+topic_like:
+  user: topic_user
+  post: associations
+  post_type: Topic
