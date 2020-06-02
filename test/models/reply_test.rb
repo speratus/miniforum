@@ -66,4 +66,10 @@ class ReplyTest < ActiveSupport::TestCase
 
     assert_equal 1, reply.replies.length
   end
+
+  test "can have many likes" do
+    reply = replies(:hasmany_test)
+
+    assert_equal 1, reply.likes.length
+  end
 end
