@@ -39,4 +39,31 @@ class ReplyTest < ActiveSupport::TestCase
     reply = Reply.new(user: user, content: "An interesting question...")
     assert_equal false, reply.save
   end
+
+  test "belongs to a user" do
+    user = users(:reply_user)
+    reply = replies(:belongs_test)
+
+    assert_equal user, reply.user
+  end
+
+  test "belongs to a post" do
+    topic = topics(:reply_topic)
+    reply = replies(:belongs_test)
+
+    assert_equal topic, reply.post
+  end
+
+  test "can belong to another reply" do
+    belong = replies(:belongs_test)
+    hasmany = replies(:hasmany_test)
+
+    assert_equal belong, hasmany.post
+  end
+
+  test "can have many replies" do
+    reply = replies(:belongs_test)
+
+    assert_equal 1, reply.replies.length
+  end
 end

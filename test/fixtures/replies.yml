@@ -11,3 +11,15 @@ two:
   user: two
   post: two
   post_type: Post
+
+belongs_test:
+  content: I agree
+  user: reply_user
+  post: reply_topic
+  post_type: Topic
+
+hasmany_test:
+  content: It's really great
+  user: reply_user
+  post: belongs_test
+  post_type: Reply
