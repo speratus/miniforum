@@ -54,4 +54,19 @@ class UserTest < ActiveSupport::TestCase
     )
     assert_equal false, user.save
   end
+
+  test "has many topics" do
+    user = users(:topic_user)
+    assert_equal 1, user.topics.length
+  end
+
+  test "has many comments" do
+    user = users(:topic_user)
+    assert_equal 1, user.comments.length
+  end
+
+  test "has many likes" do
+    user = users(:topic_user)
+    assert_equal 1, user.likes.length
+  end
 end
