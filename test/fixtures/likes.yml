@@ -9,3 +9,8 @@ two:
   user: two
   post: two
   post_type: Post
+
+belongs_test:
+  user: like_user
+  post: like_topic
+  post_type: Topic

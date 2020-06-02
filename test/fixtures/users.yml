@@ -11,3 +11,15 @@ two:
   name: MyString
   password_digest: MyString
   email: MyString
+
+like_user:
+  username: jonny
+  name: Jon Doe
+  password_digest: 1eiqpqef123rc12p3icjr1u
+  email: jonny@theuniverse.com
+
+reply_user:
+  username: buddy
+  name:  Buddy
+  password_digest: 801j380r1j83j13r9103c1
+  email: buddy@example.com

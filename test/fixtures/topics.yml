@@ -9,3 +9,13 @@ two:
   title: MyString
   content: MyText
   user: two
+
+like_topic:
+  title: Testing is important
+  content: Tests save time and effort. Write tests.
+  user: one
+
+reply_topic:
+  title: Using fixtures is useful
+  content: Using fixtures makes writing tests easier.
+  user: reply_user

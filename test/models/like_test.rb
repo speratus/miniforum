@@ -30,4 +30,16 @@ class LikeTest < ActiveSupport::TestCase
     like3 = Like.new(user: user_one)
     assert_equal false, like3.save
   end
+
+  test "belongs to a user" do
+    user = users(:like_user)
+    like = likes(:belongs_test)
+    assert_equal user, like.user
+  end
+
+  test "belongs to a post" do
+    topic = topics(:like_topic)
+    like = likes(:belongs_test)
+    assert_equal topic, like.post
+  end
 end
