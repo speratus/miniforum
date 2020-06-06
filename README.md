@@ -1,3 +1,5 @@
+[![Travis Build Status](https://travis-ci.org/speratus/miniforum.svg?branch=master)](https://travis-ci.org/speratus/miniforum)
+
 # Miniforum
 Miniforum is a small Forum app built for a blog series on dev.to: [Build a Forum App, from code to Deploy][series].
 
