@@ -5,4 +5,8 @@ class Reply < ApplicationRecord
   has_many :likes, as: :post
 
   validates :content, :user, :post, presence: true
+
+  def graphql_type
+    Types::ReplyType
+  end
 end

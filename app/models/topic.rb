@@ -4,4 +4,8 @@ class Topic < ApplicationRecord
   has_many :likes, as: :post
 
   validates :title, :content, :user, presence: true
+
+  def graphql_type
+    Types::TopicType
+  end
 end

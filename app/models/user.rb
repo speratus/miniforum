@@ -24,4 +24,8 @@ class User < ApplicationRecord
             self.errors[:email] << "Must be a valid email."
         end
     end
+
+    def graphql_type
+        Types::UserType
+    end
 end
