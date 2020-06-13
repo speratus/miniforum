@@ -5,6 +5,6 @@ module Types
     field :user, Types::UserType, null: true
     field :likes, [Types::LikeType], null: true
     field :replies, [Types::ReplyType], null: true
-    field :id, Int, null: false
+    field :id, ID, null: false
   end
 end
