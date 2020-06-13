@@ -15,6 +15,14 @@ module Types
       Topic.all
     end
 
+    field :topic, Types::TopicType, null: true do
+      argument :id, ID, required: true
+    end
+
+    def topic(id:)
+      Topic.find_by(id: id)
+    end
+
     field :user, Types::UserType, null: true do
       argument :id, ID, required: true
     end
