@@ -1,5 +1,6 @@
 module Types
   class MutationType < Types::BaseObject
+    field :create_like, mutation: Mutations::CreateLike
     field :create_reply, mutation: Mutations::CreateReply
     field :create_topic, mutation: Mutations::CreateTopic
     # TODO: remove me
