@@ -11,8 +11,10 @@ module Mutations
     def resolve(title:, content:, user_id:)
       topic = Topic.new(title: title, content: content, user_id: user_id)
       if topic.save
-        topic: topic,
-        errors: []
+        {
+          topic: topic,
+          errors: []
+        }
       else
         {
           topic: nil,
