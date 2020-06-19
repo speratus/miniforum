@@ -3,9 +3,9 @@ module Mutations
     field :like, Types::LikeType, null: true
     field :errors, [String], null: false
 
-    argument :user_id, ID, null: false
-    argument :post_id, ID, null: false
-    argument :post_type, String, null: false
+    argument :user_id, ID, required: true
+    argument :post_id, ID, required: true
+    argument :post_type, String, required: true
 
     def resolve(user_id:, post_id:, post_type:)
       type = Object.const_get(post_type)
